@@ -18,6 +18,17 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
         key_lst = pg.key.get_pressed()
+
+        if key_lst[pg.K_UP]:  # 上キーが押されたらAdd commentMore actions
+            koukaton3_rct.move_ip(0, -1)  # 上に移動
+        if key_lst[pg.K_DOWN]:
+            koukaton3_rct.move_ip(0, +1)
+        if key_lst[pg.K_LEFT]:
+            koukaton3_rct.move_ip(-1, 0)
+        if key_lst[pg.K_RIGHT]:
+            koukaton3_rct.move_ip(+1, 0)
+
+            
         x = tmr
         x = tmr%3200
         
