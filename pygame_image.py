@@ -17,6 +17,7 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
+        key_lst = pg.key.get_pressed()
         x = tmr
         x = tmr%3200
         
