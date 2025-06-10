@@ -13,6 +13,8 @@ def main():
     bg_img2 = pg.transform.flip(bg_img, True, False)
     koukaton3_img = pg.image.load("fig/3.png")
     koukaton3_img = pg.transform.flip(koukaton3_img, True, False)
+    koukaton3_rct = koukaton3_img.get_rect()
+    koukaton3_rct.center = 300, 200
     tmr = 0
     while True:
         for event in pg.event.get():
@@ -28,14 +30,15 @@ def main():
         if key_lst[pg.K_RIGHT]:
             koukaton3_rct.move_ip(+1, 0)
 
-            
+
         x = tmr
         x = tmr%3200
         
         screen.blit(bg_img, [-x, 0])  # 1枚目
         screen.blit(bg_img2, [-x+1600, 0])  # 2枚目
         screen.blit(bg_img, [-x+3200, 0])  # 3枚目
-        screen.blit(koukaton3_img, [300, 200])
+       
+        screen.blit(koukaton3_img, koukaton3_rct)
         koukaton3_rct = koukaton3_img.get_rect()
         koukaton3_rct.center = 300, 200
         
