@@ -18,13 +18,16 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
         x = tmr
-
+        x = tmr%3200
         
         screen.blit(bg_img, [-x, 0])  # 1枚目
         screen.blit(bg_img2, [-x+1600, 0])  # 2枚目
+        screen.blit(bg_img, [-x+3200, 0])  # 3枚目
         screen.blit(koukaton3_img, [300, 200])
-        koukaton3_img
+        
+
         pg.display.update()
+        
         tmr += 1        
         clock.tick(100)
 
