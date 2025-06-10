@@ -25,7 +25,7 @@ def main():
         screen.blit(bg_img, [-x+3200, 0])  # 3枚目
         screen.blit(koukaton3_img, [300, 200])
         koukaton3_rct = koukaton3_img.get_rect()
-
+        koukaton3_rct.center = 300, 200
         
 
         pg.display.update()
